@@ -1,0 +1,17 @@
+{
+   "id":"6628",
+   "recordSource":"Smallsteps",
+   "externalIds.":{
+      "childPlaceId":"",
+      "childId":""
+   },
+   "eventType":"",
+   "isEmailVerified":true,
+   "isContractSigned":true,
+   "isMandateSigned":true,
+   "isCompleted":true,
+   "isCancelled":true,
+   "causedByType":"user",
+   "causedByReason":"",
+   "date":"2020-01-01"
+}

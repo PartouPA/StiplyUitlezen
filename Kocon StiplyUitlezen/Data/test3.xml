@@ -1,0 +1,17 @@
+<FiSepaDirectDebit
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
+    <Element>
+        <Fields Action="update">
+            <ViSe>6;3</ViSe>
+            <Ds>17811831;NL21ABNA0617411875</Ds>
+            <PaSh>SR-17811831</PaSh>
+            <VaDt>S</VaDt>
+            <AuDa>1-11-2019</AuDa>
+            <UnId>55</UnId>
+            <VaDc>AUTO</VaDc>
+            <Iban>NL21ABNA0617411875</Iban>
+            <Conv>false</Conv>
+            <VaDs>1</VaDs>
+        </Fields>
+    </Element>
+</FiSepaDirectDebit> 

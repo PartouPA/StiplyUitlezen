@@ -1,0 +1,1360 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="TestTopdesk" this:TestTopdesk.KRN="92705" this:TestTopdesk.Pakket1="01-01-2021" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="Relatienummer" Type="InArgument(x:String)" />
+    <x:Property Name="KindVoornaam" Type="InArgument(x:String)" />
+    <x:Property Name="KRN" Type="InArgument(x:String)" />
+    <x:Property Name="IncassoMachtiging" Type="InArgument(x:Boolean)" />
+    <x:Property Name="Pakket1" Type="InArgument(x:String)" />
+    <x:Property Name="Pakket2" Type="InArgument(x:String)" />
+    <x:Property Name="Pakket3" Type="InArgument(x:String)" />
+    <x:Property Name="Pakket4" Type="InArgument(x:String)" />
+    <x:Property Name="Pakket5" Type="InArgument(x:String)" />
+    <x:Property Name="Pakket6" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>991,2924</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="47">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Web</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.Mail.Outlook.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Database</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Database.Activities</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="42">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.MobileAutomation</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Web</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Database</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="718,2859" sap2010:WorkflowViewState.IdRef="Sequence_18">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="Tekst" />
+      <Variable x:TypeArguments="njl:JObject" Name="JsonOut" />
+      <Variable x:TypeArguments="x:String" Name="ID" />
+      <Variable x:TypeArguments="x:String" Name="ChildId" />
+      <Variable x:TypeArguments="x:String" Default="1756709" Name="ChildPlaceId" />
+      <Variable x:TypeArguments="x:String" Name="Eventtype" />
+      <Variable x:TypeArguments="x:String" Name="IsMailVerified" />
+      <Variable x:TypeArguments="x:String" Default="True" Name="IsContractSigned" />
+      <Variable x:TypeArguments="x:String" Name="IsMandateSigned" />
+      <Variable x:TypeArguments="x:String" Name="Query" />
+      <Variable x:TypeArguments="sd:DataTable" Name="DtQueryPlannerLocatie" />
+      <Variable x:TypeArguments="x:String" Name="Locatie" />
+      <Variable x:TypeArguments="x:String" Name="Planner" />
+      <Variable x:TypeArguments="x:String" Name="IsCompleted" />
+      <Variable x:TypeArguments="x:String" Name="TopdeskURL" />
+      <Variable x:TypeArguments="ss:SecureString" Name="Topdeskwachtwoord" />
+      <Variable x:TypeArguments="x:String" Name="Topdeskusername" />
+      <Variable x:TypeArguments="x:String" Name="Wachtwoord" />
+      <Variable x:TypeArguments="x:String" Name="Dagen" />
+      <Variable x:TypeArguments="x:String" Name="Dagdelen" />
+      <Variable x:TypeArguments="x:String" Name="SoortOpvang" />
+      <Variable x:TypeArguments="x:Int32" Name="i" />
+      <Variable x:TypeArguments="x:Boolean" Name="SoortOpvangTSO" />
+      <Variable x:TypeArguments="x:Boolean" Name="SoortOpvangKDV" />
+      <Variable x:TypeArguments="x:Boolean" Name="SoortOpvangVSO" />
+      <Variable x:TypeArguments="x:Boolean" Name="SoortOpvangBSO" />
+      <Variable x:TypeArguments="x:String" Name="TopdeskTekstTSO" />
+      <Variable x:TypeArguments="x:String" Name="TopdeskTekstKDV" />
+      <Variable x:TypeArguments="x:String" Name="TopdeskTekstVSO" />
+      <Variable x:TypeArguments="x:String" Name="TopdeskTekstBSO" />
+      <Variable x:TypeArguments="x:String" Name="TopdeskTekstTotaal" />
+      <Variable x:TypeArguments="x:String" Name="OpzeggingBericht" />
+      <Variable x:TypeArguments="x:String" Default="False" Name="IsCancelled" />
+      <Variable x:TypeArguments="x:String" Name="CausedByType" />
+      <Variable x:TypeArguments="x:String" Name="CausedByReason" />
+      <Variable x:TypeArguments="x:String" Name="Datum" />
+      <Variable x:TypeArguments="x:String" Name="DatumDate" />
+      <Variable x:TypeArguments="x:String" Default="92705" Name="KRN" />
+      <Variable x:TypeArguments="x:String" Default="Minder dagen" Name="KorteOmschrijving" />
+      <Variable x:TypeArguments="x:String" Name="Label" />
+      <Variable x:TypeArguments="s:DateTime" Name="startdatum" />
+      <Variable x:TypeArguments="s:DateTime" Name="Einddatum" />
+      <Variable x:TypeArguments="x:Boolean" Name="ActieUitgevoerd" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="Acties Kocon" sap:VirtualizedContainerService.HintSize="676,2767" sap2010:WorkflowViewState.IdRef="Sequence_88">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="sd:DataTable" Name="DB_Query" />
+        <Variable x:TypeArguments="x:String" Default="Syncope TSO" Name="Locatienaam" />
+        <Variable x:TypeArguments="x:String" Default="Groep 1/2 b" Name="GroepsNaamOud" />
+        <Variable x:TypeArguments="x:String" Default="Groep 1/2 d" Name="GroepsNaamNieuw" />
+        <Variable x:TypeArguments="x:String" Name="vGroep" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Flowchart sap:VirtualizedContainerService.HintSize="634,636" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+            <av:Size x:Key="ShapeSize">60,75</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,117.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Flowchart.StartNode>
+          <x:Reference>__ReferenceID3</x:Reference>
+        </Flowchart.StartNode>
+        <FlowStep x:Name="__ReferenceID0">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">200,207</av:Point>
+              <av:Size x:Key="ShapeSize">200,66</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">300,273 300,326</av:PointCollection>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="Haal data query" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_176">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="groep" />
+              <Variable x:TypeArguments="sd:DataTable" Name="dT" />
+              <Variable x:TypeArguments="x:Boolean" Name="LeeftijdError" />
+              <Variable x:TypeArguments="x:Boolean" Name="GeenDagdelen" />
+              <Variable x:TypeArguments="x:Boolean" Name="FlexNulUren" />
+              <Variable x:TypeArguments="x:Boolean" Name="PlaatsingsDatum" />
+              <Variable x:TypeArguments="x:Boolean" Name="Markering" />
+              <Variable x:TypeArguments="x:Boolean" Name="VestigingNietGevonden" />
+              <Variable x:TypeArguments="x:Boolean" Name="AndereFinancieleTabel" />
+              <Variable x:TypeArguments="x:Boolean" Name="found" />
+              <Variable x:TypeArguments="x:Boolean" Name="StatusDebiteur" />
+              <Variable x:TypeArguments="sd:DataTable" Name="kindoverzicht" />
+              <Variable x:TypeArguments="ui:GenericValue" Name="kindteksten" />
+              <Variable x:TypeArguments="sd:DataTable" Name="kindlijst" />
+              <Variable x:TypeArguments="x:Int32" Name="i" />
+              <Variable x:TypeArguments="x:String" Name="tst" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_105">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Boolean">[ActieUitgevoerd]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Sequence DisplayName="Setttings database Kocon" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="Sequence_74">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Assign sap:VirtualizedContainerService.HintSize="338,60" sap2010:WorkflowViewState.IdRef="Assign_84">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[query]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String" xml:space="preserve">["SELECT  * FROM [RPA].[dbo].[Kocon_Plaatsingen] WHERE [Administratie] = '033' and [kind_krn]="+krn+" order by [plaatsing_index] "]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign DisplayName="Assign i = 0" sap:VirtualizedContainerService.HintSize="338,60" sap2010:WorkflowViewState.IdRef="Assign_85">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Int32">[i]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="False" ClickBeforeTyping="False" DisplayName="Send Hotkey 'client  Plaatsingen'" EmptyField="False" sap:VirtualizedContainerService.HintSize="338,154" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="home" KeyModifiers="None" SendWindowMessages="True" SpecialKey="True">
+                <ui:SendHotkey.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="350357fb-c393-4325-9118-a9da38f91061" InformativeScreenshot="47ba740f28f8326cf0957ed5676d60fe" Selector="&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='Klantenscherm' /&gt;&lt;wnd cls='ClaList*' idx='12' /&gt;&lt;ctrl name='Plaatsingen' text='Plaatsingen' /&gt;" WaitForReady="INTERACTIVE">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                  </ui:Target>
+                </ui:SendHotkey.Target>
+              </ui:SendHotkey>
+              <ui:ExecuteQuery ContinueOnError="{x:Null}" ExistingDbConnection="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DataTable="[DB_Query]" DisplayName="Execute Query" sap:VirtualizedContainerService.HintSize="338,88" sap2010:WorkflowViewState.IdRef="ExecuteQuery_7" ProviderName="System.Data.SqlClient" Sql="[query]" ConnectionString="Data Source=dtc-ipf-sql001;Initial Catalog=RPA;Persist Security Info=True;User ID=RPA;Password=Cvs_R0boTicZ!17">
+                <ui:ExecuteQuery.Parameters>
+                  <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                </ui:ExecuteQuery.Parameters>
+              </ui:ExecuteQuery>
+              <ui:AddDataColumn x:TypeArguments="x:String" Column="{x:Null}" DefaultValue="{x:Null}" AllowDBNull="True" AutoIncrement="False" ColumnName="StartDatum" DataTable="[DB_Query]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="338,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_3" MaxLength="100" Unique="False" />
+              <ui:AddDataColumn x:TypeArguments="x:String" Column="{x:Null}" DefaultValue="{x:Null}" AllowDBNull="True" AutoIncrement="False" ColumnName="EindDatum" DataTable="[DB_Query]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="338,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_4" MaxLength="100" Unique="False" />
+              <Assign sap:VirtualizedContainerService.HintSize="338,60" sap2010:WorkflowViewState.IdRef="Assign_86">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="sd:DataTable">[DB_Query]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="sd:DataTable">[(From x In DB_Query.AsEnumerable() Order By (x(“plaatsing_index”)) Select x).CopyToDataTable]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="338,60" sap2010:WorkflowViewState.IdRef="Assign_87">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[query]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String" xml:space="preserve">["SELECT  * FROM [RPA].[dbo].[Kocon_Plaatsingen] WHERE [Administratie] = '033' and [kind_krn]="+krn+" order by [plaatsing_index] "]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DB_Query]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="338,1020" sap2010:WorkflowViewState.IdRef="ForEachRow_8">
+                <ui:ForEachRow.Body>
+                  <ActivityAction x:TypeArguments="sd:DataRow">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,900" sap2010:WorkflowViewState.IdRef="Sequence_183">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:String" Name="startdatumkort" />
+                        <Variable x:TypeArguments="x:String" Name="einddatumkort" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_89">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[startdatumkort]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[row("plaatsing_algemene_datum_van").ToString.Substring(0,10).Replace("-","/")]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_90">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[einddatumkort]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[row("plaatsing_algemene_datum_tot").ToString.Substring(0,10).Replace("-","/")]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_91">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="s:DateTime">[StartDatum]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="s:DateTime">[Date.ParseExact(startdatumkort, "dd/MM/yyyy", System.Globalization.CultureInfo.CurrentCulture)]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_92">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="s:DateTime">[EindDatum]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="s:DateTime">[Date.ParseExact(einddatumkort, "dd/MM/yyyy", System.Globalization.CultureInfo.CurrentCulture)]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="CommentOut_23">
+                        <ui:CommentOut.Body>
+                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_178">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_93">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="s:DateTime">[In_EindDatumAangepast]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="s:DateTime">[Date.ParseExact(in_einddatum, "dd/MM/yyyy", System.Globalization.CultureInfo.CurrentCulture)]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                          </Sequence>
+                        </ui:CommentOut.Body>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:CommentOut>
+                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="CommentOut_24">
+                        <ui:CommentOut.Body>
+                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="346,644" sap2010:WorkflowViewState.IdRef="Sequence_180">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Sequence DisplayName="Sequence in_einddatum" sap:VirtualizedContainerService.HintSize="304,552" sap2010:WorkflowViewState.IdRef="Sequence_179">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_94">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[DagInEinddatum]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[In_Einddatum.Split("/".ToCharArray)(0).PadLeft(2,"0"c)]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_95">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[MaandInEindDatum]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[In_Einddatum.Split("/".ToCharArray)(1).PadLeft(2,"0"c)]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_96">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[JaarInEinddatum]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[In_Einddatum.Split("/".ToCharArray)(2)]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_97">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[In_EindDatum]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[DagInEinddatum+"/"+MaandInEindDatum+"/"+JaarInEinddatum]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_98">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="s:DateTime">[In_EindDatumAangepast]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="s:DateTime">[Date.ParseExact(in_einddatum, "dd/MM/yyyy", System.Globalization.CultureInfo.CurrentCulture)]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                            </Sequence>
+                          </Sequence>
+                        </ui:CommentOut.Body>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:CommentOut>
+                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="CommentOut_27">
+                        <ui:CommentOut.Body>
+                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_184">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_99">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[jaar]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">[StartDatum.ToString.Split("/".ToCharArray)(2)]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                          </Sequence>
+                        </ui:CommentOut.Body>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:CommentOut>
+                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="CommentOut_28">
+                        <ui:CommentOut.Body>
+                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_185">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_100">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[jaar]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">[jaar.ToString.Split(" ".ToCharArray)(0).Trim]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                          </Sequence>
+                        </ui:CommentOut.Body>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:CommentOut>
+                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_101">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Object">[row("StartDatum")]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Object">[StartDatum.ToString]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_102">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Object">[row("EindDatum")]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Object">[EindDatum.ToString]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ForEachRow.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:ForEachRow>
+              <Assign sap:VirtualizedContainerService.HintSize="338,60" sap2010:WorkflowViewState.IdRef="Assign_103">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="sd:DataTable">[DB_Query]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="sd:DataTable">[(From x In DB_Query.AsEnumerable() Order By convert.Todatetime(x(“StartDatum”)),convert.Todatetime(x(“EindDatum”)),(x(“plaatsing_index”)) Select x).CopyToDataTable]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:WriteCsvFile Encoding="{x:Null}" AddHeaders="True" DataTable="[DB_Query]" Delimitator="Semicolon" DisplayName="Write CSV" FilePath="Db_Query.csv" sap:VirtualizedContainerService.HintSize="338,152" sap2010:WorkflowViewState.IdRef="WriteCsvFile_3" />
+            </Sequence>
+          </Sequence>
+          <FlowStep.Next>
+            <FlowStep x:Name="__ReferenceID1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">200,326</av:Point>
+                  <av:Size x:Key="ShapeSize">200,108</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">300,434 300,476.5</av:PointCollection>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Hoe om te gaan met de dienst? Of pakken we alles als de startdatum goed is?" DataTable="[DB_Query]" DisplayName="Voor elke plaatsingsregel" sap:VirtualizedContainerService.HintSize="1590,2452" sap2010:WorkflowViewState.IdRef="ForEachRow_7">
+                <ui:ForEachRow.Body>
+                  <ActivityAction x:TypeArguments="sd:DataRow">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                    </ActivityAction.Argument>
+                    <Sequence sap:VirtualizedContainerService.HintSize="1556,2301" sap2010:WorkflowViewState.IdRef="Sequence_100">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If Condition="[ActieUitgevoerd=False]" sap:VirtualizedContainerService.HintSize="1514,2209" sap2010:WorkflowViewState.IdRef="If_141">
+                        <If.Then>
+                          <If Condition="[row(&quot;plaatsing_algemene_datum_van&quot;).ToString.Equals(Pakket1) And row(&quot;opvang_soort_plaatsing&quot;).Equals(&quot;Aanbieding&quot;) Or&#xD;&#xA;row(&quot;plaatsing_algemene_datum_van&quot;).ToString.Equals(Pakket2) And row(&quot;opvang_soort_plaatsing&quot;).Equals(&quot;Aanbieding&quot;) Or&#xD;&#xA;row(&quot;plaatsing_algemene_datum_van&quot;).ToString.Equals(Pakket3) And row(&quot;opvang_soort_plaatsing&quot;).Equals(&quot;Aanbieding&quot;) Or&#xD;&#xA;row(&quot;plaatsing_algemene_datum_van&quot;).ToString.Equals(Pakket4) And row(&quot;opvang_soort_plaatsing&quot;).Equals(&quot;Aanbieding&quot;) Or&#xD;&#xA;row(&quot;plaatsing_algemene_datum_van&quot;).ToString.Equals(Pakket5) And row(&quot;opvang_soort_plaatsing&quot;).Equals(&quot;Aanbieding&quot;) Or&#xD;&#xA;row(&quot;plaatsing_algemene_datum_van&quot;).ToString.Equals(Pakket6) And row(&quot;opvang_soort_plaatsing&quot;).Equals(&quot;Aanbieding&quot;)]" sap:VirtualizedContainerService.HintSize="1135,2051" sap2010:WorkflowViewState.IdRef="If_135">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <If.Then>
+                              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Klantenscherm" sap:VirtualizedContainerService.HintSize="756,1889" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" Version="V1">
+                                <uix:NApplicationCard.Body>
+                                  <ActivityAction x:TypeArguments="x:Object">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                    </ActivityAction.Argument>
+                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="722,1600" sap2010:WorkflowViewState.IdRef="Sequence_76">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <uix:NClick ClickType="Single" DisplayName="Click 'Wijzig'" sap:VirtualizedContainerService.HintSize="680,166" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="WindowMessages" KeyModifiers="None" MouseButton="Left">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable DesignTimeRectangle="12, 202, 79, 23" ElementType="Button" FriendlyName="'Wijzig'" FullSelectorArgument="&lt;wnd cls='ClaButton*' idx='6' title='Wijzig' /&gt;&lt;ctrl name='Wijzig' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd cls='ClaButton*' title='Wijzig' /&gt;&lt;ctrl name='Wijzig' role='push button' automationid='' check:text='Wijzig' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFMAAAAbCAYAAAAAubMBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGBSURBVGhD7ZbREYMgDECZinn4dRLW8J8d1AlYwgXcIDUgJSK11VKtbbx7dwTDB88QFE3TQNu20HUd8yYssyB3mfzse6qqysvs+57ZQF3X6zKHYWBehGUWhGUWhGUW5MtlGlBCgQmx1SBpnCVZcyDHyzQKhDIxdoIkaBtzjBKgTIyvwvEy0+pCuUKA1HbKsaDlXO5VOOGYz2UZNY7NKDhUK8qWGqzLJUd2ki6m2Go5xRH/QXKtgeZ9rgWc0jNRhN84isXNRQHxHeam/e9BP3SiwzzNwTGt8gfrC3HOBRT6JlbNVJGuQsdNz/vlCzIXPZfkpP35J2WGTY2bDVXoK1I/kZfEC5FJzn/IxOON/YuIcL1yFHrvl8iaTBznbn2S42ST9WlcmJNkhgskFUVv9TCX5vg4dwH5KpyvmeXhx/pFmbtw1UsrdyN47N9Z/4RryHTH01fXtp/50E4Cn6tK5FqV+eWwzIKwzIKwzIKsysSXzDayMnGS2cdCZphg9sMyi9HBDTPzfNeEa3evAAAAAElFTkSuQmCC" InformativeScreenshot="1b2f31d62d54e9819b1bada3fe848a95.png" ScopeSelectorArgument="&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='Klantenscherm' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                                        </uix:NClick.Target>
+                                      </uix:NClick>
+                                      <Sequence DisplayName="Statusmeldingen" sap:VirtualizedContainerService.HintSize="680,22" sap2010:WorkflowViewState.IdRef="Sequence_177">
+                                        <Sequence.Variables>
+                                          <Variable x:TypeArguments="x:Boolean" Name="AttentieMarkering" />
+                                          <Variable x:TypeArguments="x:Boolean" Name="StatusDebiteur" />
+                                        </Sequence.Variables>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:UiElementExists DisplayName="Element Exists 'STAMCOMB.EXE ATTENTIE'" Exists="[AttentieMarkering]" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                                          <ui:UiElementExists.Target>
+                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="65e3043e-6da1-4fe8-8276-3df660dc4b48" InformativeScreenshot="9a21d2fe970317ea9a25047e2f81f763" Selector="&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='ATTENTIE MARKERING !' /&gt;&lt;wnd ctrlid='16387' /&gt;" TimeoutMS="1000" WaitForReady="INTERACTIVE" />
+                                          </ui:UiElementExists.Target>
+                                        </ui:UiElementExists>
+                                        <If Condition="[AttentieMarkering]" sap:VirtualizedContainerService.HintSize="484,284" sap2010:WorkflowViewState.IdRef="If_136">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <If.Then>
+                                            <ui:Click CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Click 'ClaButton_02C10000H'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="True" SimulateClick="False">
+                                              <ui:Click.CursorPosition>
+                                                <ui:CursorPosition Position="Center">
+                                                  <ui:CursorPosition.OffsetX>
+                                                    <InArgument x:TypeArguments="x:Int32" />
+                                                  </ui:CursorPosition.OffsetX>
+                                                  <ui:CursorPosition.OffsetY>
+                                                    <InArgument x:TypeArguments="x:Int32" />
+                                                  </ui:CursorPosition.OffsetY>
+                                                </ui:CursorPosition>
+                                              </ui:Click.CursorPosition>
+                                              <ui:Click.Target>
+                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c544103c-237d-4db4-b56a-683a2ec1df36" InformativeScreenshot="f4c355fd9f9b58555939c2086632cb7a" Selector="&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='ATTENTIE MARKERING !' /&gt;&lt;wnd idx='6' /&gt;" WaitForReady="INTERACTIVE">
+                                                  <ui:Target.TimeoutMS>
+                                                    <InArgument x:TypeArguments="x:Int32" />
+                                                  </ui:Target.TimeoutMS>
+                                                </ui:Target>
+                                              </ui:Click.Target>
+                                            </ui:Click>
+                                          </If.Then>
+                                        </If>
+                                        <ui:UiElementExists DisplayName="Element Exists Status" Exists="[StatusDebiteur]" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+                                          <ui:UiElementExists.Target>
+                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7fb5af7c-12cf-40ec-8002-90cb49aa4534" InformativeScreenshot="3c1ddcd275e7d6d5da7f8fd311ac8cdf" Selector="&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='STATUS DEBITEUR !' /&gt;&lt;wnd ctrlid='16385' /&gt;" TimeoutMS="1000" WaitForReady="INTERACTIVE" />
+                                          </ui:UiElementExists.Target>
+                                        </ui:UiElementExists>
+                                        <If Condition="[StatusDebiteur]" DisplayName="If Status" sap:VirtualizedContainerService.HintSize="484,284" sap2010:WorkflowViewState.IdRef="If_137">
+                                          <If.Then>
+                                            <ui:Click CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Click 'ClaButton_02BB0000H'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="True" SimulateClick="False">
+                                              <ui:Click.CursorPosition>
+                                                <ui:CursorPosition Position="Center">
+                                                  <ui:CursorPosition.OffsetX>
+                                                    <InArgument x:TypeArguments="x:Int32" />
+                                                  </ui:CursorPosition.OffsetX>
+                                                  <ui:CursorPosition.OffsetY>
+                                                    <InArgument x:TypeArguments="x:Int32" />
+                                                  </ui:CursorPosition.OffsetY>
+                                                </ui:CursorPosition>
+                                              </ui:Click.CursorPosition>
+                                              <ui:Click.Target>
+                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7ba2556c-c2cd-49d2-aa74-66c9d6312510" InformativeScreenshot="fd2c9c3a026238e060f58ca3e57c4160" Selector="&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='STATUS DEBITEUR !' /&gt;&lt;wnd ctrlid='16388' /&gt;" WaitForReady="INTERACTIVE">
+                                                  <ui:Target.TimeoutMS>
+                                                    <InArgument x:TypeArguments="x:Int32" />
+                                                  </ui:Target.TimeoutMS>
+                                                </ui:Target>
+                                              </ui:Click.Target>
+                                            </ui:Click>
+                                          </If.Then>
+                                        </If>
+                                      </Sequence>
+                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Set status plaatsing Invoke workflow file" sap:VirtualizedContainerService.HintSize="680,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_26" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="SelectDropdownItem.xaml">
+                                        <ui:InvokeWorkflowFile.Arguments>
+                                          <InArgument x:TypeArguments="x:String" x:Key="menukeuze">Plaatsing</InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="menuselector">&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='Plaatsing*' /&gt;&lt;wnd ctrlid='16390' /&gt;</InArgument>
+                                          <OutArgument x:TypeArguments="x:Boolean" x:Key="Found" />
+                                        </ui:InvokeWorkflowFile.Arguments>
+                                      </ui:InvokeWorkflowFile>
+                                      <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Wilt u dagdelen aanpassen'" sap:VirtualizedContainerService.HintSize="680,22" sap2010:WorkflowViewState.IdRef="NCheckState_1">
+                                        <uix:NCheckState.IfExists>
+                                          <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="376,260" sap2010:WorkflowViewState.IdRef="Sequence_93">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <uix:NClick ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left">
+                                              <uix:NClick.Target>
+                                                <uix:TargetAnchorable DesignTimeRectangle="57, 208, 72, 24" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='16388' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='16388' check:text='unchecked' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEwAAAAcCAYAAADLGVncAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD6SURBVGhD7ZTBDYQgEEWpinrm4MVKaMM7vdCEDdDBrKCsENRANrJDGJIXCA7B/DxGWGuRKYcDq+Qb2DRNzAOXgfHIxzzPz4Gt68ocLMtSFljYG53qwIQQQ89VgYVDI8NPspBuDDNKbvcC6otv/4C8YVQC69YwDcL/h0cqNFFtC/oyTMMZklsLicqk9W/RrWHWKJTBsA3Qaf3bdGXYvj6s8oa1C4ywYQaVPPuT71nxOgmPDdtJnl3Up+J9AIRtlsrk51+AsGG0IWnYblbOVW0rwv1sWCU0exhBfjJs1NnBhlVSFJgrYk4eA3MfmZzbwJh7ssCYMjiwKix+AJJGSTyCHBBMAAAAAElFTkSuQmCC" InformativeScreenshot="e43dadd15bc023c47501709c543057da.png" ScopeSelectorArgument="&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='AANPASSEN DAGDELEN?' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                                              </uix:NClick.Target>
+                                            </uix:NClick>
+                                          </Sequence>
+                                        </uix:NCheckState.IfExists>
+                                        <uix:NCheckState.IfNotExists>
+                                          <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="250,84" sap2010:WorkflowViewState.IdRef="Sequence_94">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </Sequence>
+                                        </uix:NCheckState.IfNotExists>
+                                        <uix:NCheckState.Target>
+                                          <uix:TargetAnchorable DesignTimeRectangle="63, 36, 340, 158" ElementType="Text" FriendlyName="'Wilt u'" FullSelectorArgument="&lt;wnd aaname='  Wilt u de gekozen soort plaatsing overnemen bij de reeds gesel*' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='  Wilt u de gekozen soort plaatsing overnemen bij de reeds gesel*' check:text='Wilt u de gekozen soort plaatsing overnemen bij de reeds geselecteerde dagdelen?' /&gt;" ImageBase64="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zasMw/5HBFfmWB3rBGw1t+n55VqUBn2sj9c2a/t03oU9GB0brf3qeVsdegHbew049OAvueqbrGw3q8LqqF0TGJf7Lz4rzSFTf56ZXuuGQ+9YJ2Anj9aidNhHWvtybHq9HH807kNzulpnAQtPVwVsxc30+9kD+KPdA7Z8V5W07+oIZg/gSzl+BwvApwhYgCACFiCIgAUIImABgghYgCACFiCIgAUIImABgghYgCACFiCIgAUIImABgghYgCACFiCIgAUIImABgghYgCACFiCIgAUIImABgghYgCACFiCIgAUIImABgghYgCACFiCIgAUIImABgghYgCACFiCIgAUIImABgghYgCACFiCIgAUIImABgghYgCACFiCIgAUIImABgghYgCACFiCIgAUIImABgghYgCACFiCIgAUIImABgghYgCACFiCIgAUIImABgghYgCACFiCIgAUIImABgghYgCACFiCIgAUIImABgghYgCACFiCIgAUIImABgghYgCACFiCIgAUIImABgghYgCACFiCIgAUIImABgghYgCACFiCIgAUIImABgghYgCACFiCIgAUIImABgghYgCACFiCIgAUIImABgghYgCACFiCIgAUIImABgghYgCACFiCIgAUIImABgghYgCACFiCIgAUIImABgghYgCACFiCIgAUIImABgghYgCACFiCIgAUIImABgghYgCACFiCIgAUIImABgghYgCACFiCIgAUIImABgghYgCAv0z/zvwB4tp8/f94AeD4BCxBEwAIEEbAAIX7e/g/12B8PnqLXoQAAAABJRU5ErkJggg==" InformativeScreenshot="0ac299682f61ec1209b621a93d5ee88d.png" ScopeSelectorArgument="&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='AANPASSEN DAGDELEN?' /&gt;" SearchSteps="Selector, FuzzySelector" />
+                                        </uix:NCheckState.Target>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NCheckState>
+                                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="680,192" sap2010:WorkflowViewState.IdRef="CommentOut_22">
+                                        <ui:CommentOut.Body>
+                                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_95">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <Sequence DisplayName="Zet dagen op P" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Sequence_92">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <If Condition="[Plaatsing(&quot;plaatsing_mamo_soort&quot;).ToString.Equals(&quot;A&quot;)]" sap:VirtualizedContainerService.HintSize="484,261" sap2010:WorkflowViewState.IdRef="If_55">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <If.Then>
+                                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke workflow file" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="SelectDropdownItem.xaml">
+                                                    <ui:InvokeWorkflowFile.Arguments>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="menukeuze">P</InArgument>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="menuselector">&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='Plaatsing*' /&gt;&lt;wnd cls='ClaDrop*' idx='11' /&gt;&lt;ctrl role='client' /&gt;</InArgument>
+                                                      <OutArgument x:TypeArguments="x:Boolean" x:Key="Found" />
+                                                    </ui:InvokeWorkflowFile.Arguments>
+                                                  </ui:InvokeWorkflowFile>
+                                                </If.Then>
+                                              </If>
+                                              <If Condition="[Plaatsing(&quot;plaatsing_mami_soort&quot;).ToString.Equals(&quot;A&quot;)]" sap:VirtualizedContainerService.HintSize="484,261" sap2010:WorkflowViewState.IdRef="If_56">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <If.Then>
+                                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke workflow file" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_17" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="SelectDropdownItem.xaml">
+                                                    <ui:InvokeWorkflowFile.Arguments>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="menukeuze">P</InArgument>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="menuselector">&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='Plaatsing*' /&gt;&lt;wnd cls='ClaDrop*' idx='18' /&gt;&lt;ctrl role='client' /&gt;</InArgument>
+                                                      <OutArgument x:TypeArguments="x:Boolean" x:Key="Found" />
+                                                    </ui:InvokeWorkflowFile.Arguments>
+                                                  </ui:InvokeWorkflowFile>
+                                                </If.Then>
+                                              </If>
+                                              <If Condition="[Plaatsing(&quot;plaatsing_dimo_soort&quot;).ToString.Equals(&quot;A&quot;)]" sap:VirtualizedContainerService.HintSize="484,261" sap2010:WorkflowViewState.IdRef="If_57">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <If.Then>
+                                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke workflow file" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_18" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="SelectDropdownItem.xaml">
+                                                    <ui:InvokeWorkflowFile.Arguments>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="menukeuze">P</InArgument>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="menuselector">&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='Plaatsing*' /&gt;&lt;wnd cls='ClaDrop*' idx='12' /&gt;&lt;ctrl role='client' /&gt;</InArgument>
+                                                      <OutArgument x:TypeArguments="x:Boolean" x:Key="Found" />
+                                                    </ui:InvokeWorkflowFile.Arguments>
+                                                  </ui:InvokeWorkflowFile>
+                                                </If.Then>
+                                              </If>
+                                              <If Condition="[Plaatsing(&quot;plaatsing_dimi_soort&quot;).ToString.Equals(&quot;A&quot;)]" sap:VirtualizedContainerService.HintSize="484,260" sap2010:WorkflowViewState.IdRef="If_58">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <If.Then>
+                                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke workflow file" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="SelectDropdownItem.xaml">
+                                                    <ui:InvokeWorkflowFile.Arguments>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="menukeuze">P</InArgument>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="menuselector">&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='Plaatsing*' /&gt;&lt;wnd cls='ClaDrop*' idx='19' /&gt;&lt;ctrl role='client' /&gt;</InArgument>
+                                                      <OutArgument x:TypeArguments="x:Boolean" x:Key="Found" />
+                                                    </ui:InvokeWorkflowFile.Arguments>
+                                                  </ui:InvokeWorkflowFile>
+                                                </If.Then>
+                                              </If>
+                                              <If Condition="[Plaatsing(&quot;plaatsing_womo_soort&quot;).ToString.Equals(&quot;A&quot;)]" sap:VirtualizedContainerService.HintSize="484,260" sap2010:WorkflowViewState.IdRef="If_59">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <If.Then>
+                                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke workflow file" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_20" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="SelectDropdownItem.xaml">
+                                                    <ui:InvokeWorkflowFile.Arguments>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="menukeuze">P</InArgument>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="menuselector">&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='Plaatsing*' /&gt;&lt;wnd cls='ClaDrop*' idx='13' /&gt;&lt;ctrl role='client' /&gt;</InArgument>
+                                                      <OutArgument x:TypeArguments="x:Boolean" x:Key="Found" />
+                                                    </ui:InvokeWorkflowFile.Arguments>
+                                                  </ui:InvokeWorkflowFile>
+                                                </If.Then>
+                                              </If>
+                                              <If Condition="[Plaatsing(&quot;plaatsing_womi_soort&quot;).ToString.Equals(&quot;A&quot;)]" sap:VirtualizedContainerService.HintSize="484,260" sap2010:WorkflowViewState.IdRef="If_60">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <If.Then>
+                                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke workflow file" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_21" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="SelectDropdownItem.xaml">
+                                                    <ui:InvokeWorkflowFile.Arguments>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="menukeuze">P</InArgument>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="menuselector">&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='Plaatsing*' /&gt;&lt;wnd cls='ClaDrop*' idx='20' /&gt;&lt;ctrl role='client' /&gt;</InArgument>
+                                                      <OutArgument x:TypeArguments="x:Boolean" x:Key="Found" />
+                                                    </ui:InvokeWorkflowFile.Arguments>
+                                                  </ui:InvokeWorkflowFile>
+                                                </If.Then>
+                                              </If>
+                                              <If Condition="[Plaatsing(&quot;plaatsing_domo_soort&quot;).ToString.Equals(&quot;A&quot;)]" sap:VirtualizedContainerService.HintSize="484,260" sap2010:WorkflowViewState.IdRef="If_61">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <If.Then>
+                                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke workflow file" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_22" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="SelectDropdownItem.xaml">
+                                                    <ui:InvokeWorkflowFile.Arguments>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="menukeuze">P</InArgument>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="menuselector">&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='Plaatsing*' /&gt;&lt;wnd cls='ClaDrop*' idx='14' /&gt;&lt;ctrl role='client' /&gt;</InArgument>
+                                                      <OutArgument x:TypeArguments="x:Boolean" x:Key="Found" />
+                                                    </ui:InvokeWorkflowFile.Arguments>
+                                                  </ui:InvokeWorkflowFile>
+                                                </If.Then>
+                                              </If>
+                                              <If Condition="[Plaatsing(&quot;plaatsing_domi_soort&quot;).ToString.Equals(&quot;A&quot;)]" sap:VirtualizedContainerService.HintSize="484,260" sap2010:WorkflowViewState.IdRef="If_62">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <If.Then>
+                                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke workflow file" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_23" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="SelectDropdownItem.xaml">
+                                                    <ui:InvokeWorkflowFile.Arguments>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="menukeuze">P</InArgument>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="menuselector">&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='Plaatsing*' /&gt;&lt;wnd cls='ClaDrop*' idx='21' /&gt;&lt;ctrl role='client' /&gt;</InArgument>
+                                                      <OutArgument x:TypeArguments="x:Boolean" x:Key="Found" />
+                                                    </ui:InvokeWorkflowFile.Arguments>
+                                                  </ui:InvokeWorkflowFile>
+                                                </If.Then>
+                                              </If>
+                                              <If Condition="[Plaatsing(&quot;plaatsing_vrmo_soort&quot;).ToString.Equals(&quot;A&quot;)]" sap:VirtualizedContainerService.HintSize="484,260" sap2010:WorkflowViewState.IdRef="If_63">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <If.Then>
+                                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke workflow file" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="SelectDropdownItem.xaml">
+                                                    <ui:InvokeWorkflowFile.Arguments>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="menukeuze">P</InArgument>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="menuselector">&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='Plaatsing*' /&gt;&lt;wnd cls='ClaDrop*' idx='15' /&gt;&lt;ctrl role='client' /&gt;</InArgument>
+                                                      <OutArgument x:TypeArguments="x:Boolean" x:Key="Found" />
+                                                    </ui:InvokeWorkflowFile.Arguments>
+                                                  </ui:InvokeWorkflowFile>
+                                                </If.Then>
+                                              </If>
+                                              <If Condition="[Plaatsing(&quot;plaatsing_vrmi_soort&quot;).ToString.Equals(&quot;A&quot;)]" sap:VirtualizedContainerService.HintSize="484,260" sap2010:WorkflowViewState.IdRef="If_64">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <If.Then>
+                                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke workflow file" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_25" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="SelectDropdownItem.xaml">
+                                                    <ui:InvokeWorkflowFile.Arguments>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="menukeuze">P</InArgument>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="menuselector">&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='Plaatsing*' /&gt;&lt;wnd cls='ClaDrop*' idx='22' /&gt;&lt;ctrl role='client' /&gt;</InArgument>
+                                                      <OutArgument x:TypeArguments="x:Boolean" x:Key="Found" />
+                                                    </ui:InvokeWorkflowFile.Arguments>
+                                                  </ui:InvokeWorkflowFile>
+                                                </If.Then>
+                                              </If>
+                                            </Sequence>
+                                          </Sequence>
+                                        </ui:CommentOut.Body>
+                                      </ui:CommentOut>
+                                      <uix:NClick ClickType="Single" DisplayName="Click 'Opslaan'" sap:VirtualizedContainerService.HintSize="680,166" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="WindowMessages" KeyModifiers="None" MouseButton="Left">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable DesignTimeRectangle="9, 44, 78, 23" ElementType="Button" FriendlyName="'Opslaan'" FullSelectorArgument="&lt;wnd ctrlid='16609' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='16609' check:text='Opslaan' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFIAAAAbCAYAAADve9g/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFbSURBVGhD7ZbR0YMgDICZinl4dRLW8J1dWMIF3CA/AUWMmKOVXvVvvPvuiiHl8hFRNc8zCNcRkZ3IIuV6/RqGoS5ymiahkXEceZHrWOARkZ0QkZ0QkZ14oEgHRhlw1dj3+LhIbzUopTaMq85r5wdFOhPEaQue3rsk89dEegu6WjCK0GD9+tuAQblLx2rr89woPXfzPif9rweryzkKjEu5fIxf9x0+J9KZ085DQakoLIgWuAij+WG85Zx05Onm0RhZl8tr5AYi9wVgLHZHLA67hRZIcnCdpasSLTG6Lnbv2vHvcYtHu5yzSV7BOUnEQX4UVeY3xg7r3llkIJ5x7MuGFoTjVBC+7UuhOE7nGJFFHv8sj4s9TSTCf/5gQUUssD+3iljekL2EuDHrHBPO0abYA0Xy0IKei4jsxJdF/h9EZCdEZCdEZCdYkRgU2qmKxJvC6xxECtcQkV2Y4Q9Sjb8FvZTlPAAAAABJRU5ErkJggg==" InformativeScreenshot="2ec0feb4024a32dccaf7c24edb2766ce.png" ScopeSelectorArgument="&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='Plaatsing wijzigen*' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                                        </uix:NClick.Target>
+                                      </uix:NClick>
+                                      <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'vervolgplaatsing'" sap:VirtualizedContainerService.HintSize="680,485" sap2010:WorkflowViewState.IdRef="NCheckState_2">
+                                        <uix:NCheckState.IfExists>
+                                          <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="376,259" sap2010:WorkflowViewState.IdRef="Sequence_96">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <uix:NClick ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="WindowMessages" KeyModifiers="None" MouseButton="Left">
+                                              <uix:NClick.Target>
+                                                <uix:TargetAnchorable DesignTimeRectangle="475, 326, 100, 24" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='16405' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='16405' check:text='unchecked' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGgAAAAcCAYAAACNr/p2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF1SURBVGhD7ZXRkYQgDECtinr48MdKaMN/eqEJG7CDnEFgAIO65+6Ruc3OvNkxJDDmAQ7ruoLAFxHEnCRoHEeBEaQg+fX/TdN0LmhZFqET8zzfExRjwt8igpgjgpgjgpjDSpDVAyjjyLHHOANKGXDUGGP4CMIGagNGabDU+FNE0DPw9Gi7gjPK/6cxL06DHgYYEG2v40mE24QrMK6KW73XHOq2+RTGwyZp5VHrfggmguz2wqEpRYPDcxyr81rxM0HV/HFj7POF3MM8dR6x7odgIQhPTf7tSc3A56JRjRPxSjw/FQG/dlG3cSsvmz/WvRkGgnAXlo3wxCb8VkSamxBEXUtF3catvG8QRDbiVRFVvLgGq/w85uuyqysXdCsvWzfWvZnOgvAFG3d4FNdqyEmj8IrcTyF+9In8/PqKm6OYL3CZ9+8FCVd0F5R2aAOq5puQE8QcEcQcEcQcEcScW4IwSejHqSAcFPrTFCTw4SBI4IkIYs0KPyfASMeWPx6RAAAAAElFTkSuQmCC" InformativeScreenshot="9f573fd0eb9487bc025d73586a123b26.png" ScopeSelectorArgument="&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='Aanpassen*' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                                              </uix:NClick.Target>
+                                            </uix:NClick>
+                                          </Sequence>
+                                        </uix:NCheckState.IfExists>
+                                        <uix:NCheckState.IfNotExists>
+                                          <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="250,84" sap2010:WorkflowViewState.IdRef="Sequence_97">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </Sequence>
+                                        </uix:NCheckState.IfNotExists>
+                                        <uix:NCheckState.Target>
+                                          <uix:TargetAnchorable DesignTimeRectangle="9, 208, 458, 142" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='49152' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='49152' check:text='unchecked' /&gt;" ImageBase64="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" InformativeScreenshot="8bae5c89a0c72ce1a01fdeccd2d2a698.png" ScopeSelectorArgument="&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='Aanpassen Soort Plaatsing Vervolg Plaatsingen' /&gt;" SearchSteps="Selector, FuzzySelector" />
+                                        </uix:NCheckState.Target>
+                                      </uix:NCheckState>
+                                      <Assign sap:VirtualizedContainerService.HintSize="680,61" sap2010:WorkflowViewState.IdRef="Assign_104">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:Boolean">[ActieUitgevoerd]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                    </Sequence>
+                                  </ActivityAction>
+                                </uix:NApplicationCard.Body>
+                                <uix:NApplicationCard.TargetApp>
+                                  <uix:TargetApp Area="0, 0, 0, 0" FilePath="\\dtc-ipv-koc001\APPLICATIE\stamcomb.exe" IconBase64="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" InformativeScreenshot="a99ca47e3f73d86637e262fa6d1e4a1c.png" Selector="&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='Klantenscherm' /&gt;" />
+                                </uix:NApplicationCard.TargetApp>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </uix:NApplicationCard>
+                            </If.Then>
+                            <If.Else>
+                              <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Send Hotkey 'client  down'" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="SendHotkey_7" Key="down" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
+                                <ui:SendHotkey.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d7c4e43d-22e4-4920-a7d7-0ce0a4ca2a3e" InformativeScreenshot="a239c7cbbebce27cf4cce53e0348c581" Selector="&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='Klantenscherm' /&gt;&lt;wnd cls='ClaList*' idx='12' /&gt;&lt;ctrl name='Plaatsingen' role='client' /&gt;">
+                                    <ui:Target.TimeoutMS>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:Target.TimeoutMS>
+                                    <ui:Target.WaitForReady>
+                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                    </ui:Target.WaitForReady>
+                                  </ui:Target>
+                                </ui:SendHotkey.Target>
+                              </ui:SendHotkey>
+                            </If.Else>
+                          </If>
+                        </If.Then>
+                        <If.Else>
+                          <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Send Hotkey 'client  down'" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="SendHotkey_13" Key="down" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
+                            <ui:SendHotkey.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d7c4e43d-22e4-4920-a7d7-0ce0a4ca2a3e" InformativeScreenshot="a239c7cbbebce27cf4cce53e0348c581" Selector="&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='Klantenscherm' /&gt;&lt;wnd cls='ClaList*' idx='12' /&gt;&lt;ctrl name='Plaatsingen' role='client' /&gt;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:SendHotkey.Target>
+                          </ui:SendHotkey>
+                        </If.Else>
+                      </If>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ForEachRow.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:ForEachRow>
+              <FlowStep.Next>
+                <FlowDecision x:Name="__ReferenceID2" Condition="[ActieUitgevoerd]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1" True="{x:Reference __ReferenceID0}">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <av:Point x:Key="ShapeLocation">260.5,476.5</av:Point>
+                      <av:Size x:Key="ShapeSize">79,87</av:Size>
+                      <av:PointCollection x:Key="TrueConnector">260.5,520 170,520 170,240 200,240</av:PointCollection>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </FlowDecision>
+              </FlowStep.Next>
+            </FlowStep>
+          </FlowStep.Next>
+        </FlowStep>
+        <x:Reference>__ReferenceID1</x:Reference>
+        <x:Reference>__ReferenceID2</x:Reference>
+        <FlowStep x:Name="__ReferenceID3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">200,117.5</av:Point>
+              <av:Size x:Key="ShapeSize">200,66</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">300,183.5 300,207</av:PointCollection>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="Sequence zoek kind" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_186">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send F9 - zoek krn" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="SendHotkey_14" Key="f9" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="53b477aa-bc36-4696-a28c-b1f552abd26a" InformativeScreenshot="c38c17f68c58a862d37434ebb6991033" Selector="&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='Klantenscherm' /&gt;&lt;wnd cls='ClaSheet*' idx='1' /&gt;" WaitForReady="INTERACTIVE">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                </ui:Target>
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
+            <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" AlterIfDisabled="True" ClickBeforeTyping="False" DisplayName="Type te zoeken debiteur" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_3" SendWindowMessages="False" SimulateType="False" Text="[KRN.Trim]">
+              <ui:TypeInto.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1d20b855-72bb-43e7-8794-587fc88cc0f4" InformativeScreenshot="b4c41d3220c4900a5b21a01da351eaa2" Selector="&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='Zoek Kind op KRN' /&gt;&lt;wnd ctrlid='16386' /&gt;" WaitForReady="INTERACTIVE">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                </ui:Target>
+              </ui:TypeInto.Target>
+            </ui:TypeInto>
+            <ui:Click CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Click zoek debiteur" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8ba9c2c2-eabc-4498-9520-85cfcb861d00" InformativeScreenshot="493e2e852de7011d027200d69690c80e" Selector="&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='Zoek Kind op KRN' /&gt;&lt;wnd ctrlid='16390' /&gt;" WaitForReady="INTERACTIVE">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+          </Sequence>
+          <FlowStep.Next>
+            <x:Reference>__ReferenceID0</x:Reference>
+          </FlowStep.Next>
+        </FlowStep>
+      </Flowchart>
+      <If Condition="[Incassomachtiging]" DisplayName="If incassomachtiging is getekend" sap:VirtualizedContainerService.HintSize="634,1999" sap2010:WorkflowViewState.IdRef="If_66">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <If.Then>
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Klantenscherm" sap:VirtualizedContainerService.HintSize="434,1822" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" Version="V1">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,1533" sap2010:WorkflowViewState.IdRef="Sequence_101">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="Debnr" />
+                    <Variable x:TypeArguments="x:Boolean" Name="Plaatsingsregels" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NGetText DisplayName="Get Text '45076200'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_1">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="309, 54, 88, 16" FriendlyName="'45076200'" FullSelectorArgument="&lt;wnd ctrlid='16578' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='16578' /&gt;" ImageBase64="" InformativeScreenshot="cf97e512da063ace6f581558e36bb1df.png" ScopeSelectorArgument="&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='Klantenscherm' /&gt;" SearchSteps="FuzzySelector" />
+                    </uix:NGetText.Target>
+                    <uix:NGetText.Text>
+                      <OutArgument x:TypeArguments="x:String">[Debnr]</OutArgument>
+                    </uix:NGetText.Text>
+                  </uix:NGetText>
+                  <uix:NClick ClickType="Single" DisplayName="Click '~faktp1.GIF'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="341, 119, 23, 23" FriendlyName="'~faktp1.GIF'" FullSelectorArgument="&lt;wnd ctrlid='16594' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='16594' check:text='~faktp1.GIF' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB5SURBVEhL7Y8LCoAgEAX35l5tb2a84EGZ0rr+KBwYAnV3SFQ1znJ9TETM5uZLPmIhhHOJBbzDe5juyXmLMYSvhaYYYNCCO4ZBaqUpVsuQGO5y911jjNAUnH3zz8iOvbljP42VaIp5dMUgBz1e95RcFxvtjnVxYkzjATebyvRA0YKgAAAAAElFTkSuQmCC" InformativeScreenshot="6d00ed253c145ab09bb562cf01aa9936.png" ScopeSelectorArgument="&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='Klantenscherm' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'Factuur automatisch'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NCheck_1">
+                    <uix:NCheck.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="113, 182, 240, 16" ElementType="CheckBox" FriendlyName="'Factuur automatisch'" FullSelectorArgument="&lt;wnd cls='ClaCheck*' idx='1' title=' Factuur automatisch incasseren' /&gt;&lt;ctrl name=' Factuur automatisch incasseren' role='check box' /&gt;" FuzzySelectorArgument="&lt;wnd cls='ClaCheck*' title=' Factuur automatisch incasseren' /&gt;&lt;ctrl name=' Factuur automatisch incasseren' role='check box' automationid='' check:fulltext='Factuur automatisch incasseren' /&gt;" ImageBase64="" InformativeScreenshot="8779343ebbe64551733122c5715426ae.png" ScopeSelectorArgument="&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='Verzorgers Wijzigen:*' /&gt;" SearchSteps="Selector, FuzzySelector" />
+                    </uix:NCheck.Target>
+                  </uix:NCheck>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'sr-12'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_2" Text="[&quot;SR-&quot;+Relatienummer]">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="216, 300, 256, 11" FriendlyName="'sr-12'" FullSelectorArgument="&lt;wnd cls='ClaEdi*' idx='52' /&gt;&lt;ctrl role='client' /&gt;" FuzzySelectorArgument="&lt;wnd cls='ClaEdi*' /&gt;&lt;ctrl role='client' automationid='' check:text='sr-12' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQQAAAAPCAYAAAACuLF9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEUSURBVGhD7djtDYMgFIVh5mIewzyM4BQu4xJucKuICPhFE4tJfZ/kNFGr/cXxFtW2rRBCyMQVQtM0hJAXZxiGtBAAvBeFACCoXgidUaKUEtP5E04vVs/n1xhJvgLg56oVQm91suC3hRAVQGfm72k7XgFQy2kh5It4ir/i3+harJ0Xb5l1EkgLIdeJcb/HlADUdFwIy1t6d+VuR/wyhYXAhAA84roQQsZpIKzOaEKIV2x+z7igUwWF0FvR/v7zKQLA3c73EKLFucRf2C+ES1eFsPxVUKK/ezCAGxRvKi77Cf7o/kJgMgAed1gIexuK637C94Ww+7zwl2KdDPJQDkA9xRMCgP+XFMJ0QAh5d1whuE8AEJEPETNvPXXs96UAAAAASUVORK5CYII=" InformativeScreenshot="61874cb1a4438ab1f8b94d5dc2996b42.png" ScopeSelectorArgument="&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='Verzorgers Wijzigen*' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into datum vandaag" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Text="[DateTime.Now.ToString(&quot;dd-MM-yyyy&quot;)]">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="216, 336, 180, 11" FriendlyName="'01-07-2014'" FullSelectorArgument="&lt;wnd cls='ClaEdit*' idx='53' /&gt;&lt;ctrl role='client' /&gt;" FuzzySelectorArgument="&lt;wnd cls='ClaEdit*' /&gt;&lt;ctrl role='client' automationid='' check:text='01-07-2014' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALgAAAAPCAYAAABX/AUKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVGhD7ZiBrYMgEIadi3kM8zCCU7iMS7gBT4UDjgJi5TVK/i+5JoV64cLHlXaYpkkjED3GziH4OI4IRFexrisXHICegOCga04En7UcBj24kNvIJ7M08zI1maSQd1FasDkfZRatRPxMvN5G9QRrFGqxg+CJFAQnYYQ+9pA2VSgzvbEoYUU5EYJxnpfhZJJ2IMeeNxB2lmZdLm+revghgeDPJi94IIDZQi8Ih8YrBa/Oa6Buel0kEtEejEb1HOvZcqiv1wV+SV5w6oDBLpNsnIuCV+fdoM9mrhJF4g7eoB7T4c03wPcHD/yS/xPcyWnjhmhMolzeEHetCdZ0tx6bk8Yg+Dt47hXFiXy1e/s7MpPvZj3x/TwMSP5cbv3INFwUvCqvl7Qup4VyJZ9rWw86+DsoCL5T/lst2dU+hElRzkvy+G5bQ5zTh6ddPRD8HZwIDsC7YYLvbxCI3uIQ/HgFoEu0/gPBHyBXfqD8zwAAAABJRU5ErkJggg==" InformativeScreenshot="8a9b3edbc487f636e11798f70e625f38.png" ScopeSelectorArgument="&lt;wnd app='stamcomb.exe' cls='ClaWi*' title='Verzorgers Wijzigen*' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'unchecked'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="9, 50, 74, 21" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='16596' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='16596' check:text='unchecked' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE4AAAAZCAYAAACfIRhSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFbSURBVFhH7ZbRkYQgDECpinr48MdKaMN/eqEJG7CDnAFBjJJjudlzvYszb2YxZNk8Iq5algWE1xFxnWRxwzAIDVyKk6t+jePIi5vnWSBM09QmLt0TIiKuk4eJc2CUAXcZ+13eKs5bDUqpHeMu57XzD8Q5s4rSFjy99yN5f12ct6AvC8TCNVifPhswKHPrSG19nhsk52495sTv9WB1OUeBcTGXj/HrtvIecc5UOwuFxCKwAFrQJojmr+M9p9Jx1c2iMbIul8dws7jjD8ZY2P1QDHYDLYjk4Dpb10RaYnRd7M7U0e3c/qiWc3apCZwTCz/JDmLK/MbYad1PErcSzij25UALwHEsAN/GpUAcx3OIyCGPc5bFxT5dHML/HcECitjK8dwpYnkDjkWHjUhzzHoONsUeII6HFvAsRFwnN4p7NiKukyZxOEk4w4rDoFCnKk74npM44TVEXBcLfAGZbLkQ4fCZegAAAABJRU5ErkJggg==" InformativeScreenshot="678e4a001768d36b61cbb99a1fdd8ed4.png" ScopeSelectorArgument="&lt;wnd app='stamcomb.exe' cls='ClaWin0*' title='Verzorgers Wijzigen*' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <Sequence DisplayName="Fout Exists" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Sequence_193">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:Boolean" Name="FoutieveIBAN" />
+                      <Variable x:TypeArguments="x:Boolean" Name="Machtigingbestaatal" />
+                      <Variable x:TypeArguments="x:Boolean" Name="FoutBIC" />
+                      <Variable x:TypeArguments="x:Boolean" Name="FouteIncasso" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:UiElementExists DisplayName="Element Exists IBAN" Exists="[FoutieveIBAN]" sap:VirtualizedContainerService.HintSize="899,68" sap2010:WorkflowViewState.IdRef="UiElementExists_6">
+                      <ui:UiElementExists.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b0ee83c1-8c1e-40c8-a4ca-57b3d46d746b" Selector="&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='IBAN ONGELDIG !!' /&gt;&#xA;&lt;wnd cls='ClaList*' ctrlid='16385' /&gt;&#xA;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
+                      </ui:UiElementExists.Target>
+                    </ui:UiElementExists>
+                    <ui:UiElementExists DisplayName="Element Exists machtiging" Exists="[Machtigingbestaatal]" sap:VirtualizedContainerService.HintSize="899,68" sap2010:WorkflowViewState.IdRef="UiElementExists_7">
+                      <ui:UiElementExists.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ea93e6f3-6c95-4a57-9c58-88b6e9f17aa2" Selector="&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='MACHTIGING' /&gt;&#xA;&lt;wnd cls='ClaPrompt*' title='Het Machtigingskenmerk bestaat al.' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
+                      </ui:UiElementExists.Target>
+                    </ui:UiElementExists>
+                    <ui:UiElementExists DisplayName="Element Exists BIC" Exists="[FoutBIC]" sap:VirtualizedContainerService.HintSize="899,68" sap2010:WorkflowViewState.IdRef="UiElementExists_8">
+                      <ui:UiElementExists.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4cfec49a-413d-47f4-9bef-0ed0f29b0f66" Selector="&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='BIC ONGELDIG !!' /&gt;&#xA;&lt;wnd cls='ClaList*' ctrlid='16385' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
+                      </ui:UiElementExists.Target>
+                    </ui:UiElementExists>
+                    <ui:UiElementExists DisplayName="Element Exists Incasso" Exists="[FouteIncasso]" sap:VirtualizedContainerService.HintSize="899,106" sap2010:WorkflowViewState.IdRef="UiElementExists_9">
+                      <ui:UiElementExists.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="53171775-e90a-4480-acbb-4d20c6c67629" InformativeScreenshot="b9e8dabf128fb2931a2398783a0bd6de" Selector="&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='INCASSO' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
+                      </ui:UiElementExists.Target>
+                    </ui:UiElementExists>
+                    <If Condition="[FoutBIC or FouteIncasso or FoutieveIBAN or Machtigingbestaatal = True]" DisplayName="If fout exists" sap:VirtualizedContainerService.HintSize="899,698" sap2010:WorkflowViewState.IdRef="If_142">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="376,539" sap2010:WorkflowViewState.IdRef="Sequence_188">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;fout sepa&quot;]" />
+                          <ui:Click CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                            <ui:Click.CursorPosition>
+                              <ui:CursorPosition Position="Center">
+                                <ui:CursorPosition.OffsetX>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetX>
+                                <ui:CursorPosition.OffsetY>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetY>
+                              </ui:CursorPosition>
+                            </ui:Click.CursorPosition>
+                            <ui:Click.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8940af83-bec1-45d2-a5cb-01176e9f4378" InformativeScreenshot="26c45456413e5ae9c7d023add211d75a" Selector="&lt;wnd app='stamcomb.exe' cls='ClaWin*' idx='1' /&gt;&lt;wnd ctrlid='16388' /&gt;" WaitForReady="INTERACTIVE">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                              </ui:Target>
+                            </ui:Click.Target>
+                          </ui:Click>
+                          <ui:Click CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                            <ui:Click.CursorPosition>
+                              <ui:CursorPosition Position="Center">
+                                <ui:CursorPosition.OffsetX>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetX>
+                                <ui:CursorPosition.OffsetY>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetY>
+                              </ui:CursorPosition>
+                            </ui:Click.CursorPosition>
+                            <ui:Click.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bd9f2faa-08dd-4bfc-845c-216320214df7" InformativeScreenshot="134f5eefefeac131032e203399df2d2a" Selector="&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='Verzorgers Wijzigen:*' /&gt;&lt;wnd ctrlid='16597' /&gt;" WaitForReady="INTERACTIVE">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                              </ui:Target>
+                            </ui:Click.Target>
+                          </ui:Click>
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="CommentOut_29">
+                            <ui:CommentOut.Body>
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,306" sap2010:WorkflowViewState.IdRef="Sequence_187">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:Click CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" ContinueOnError="True" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                                  <ui:Click.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </ui:Click.CursorPosition>
+                                  <ui:Click.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5fa87f31-1598-4d78-a826-7217d1508adc" InformativeScreenshot="11da174be2474ef654bfe96580d9e722" Selector="&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='Verzorgers Wijzigen: *' /&gt;&lt;wnd cls='ClaButton*' title='Annuleren' ctrlid='16595' /&gt;" WaitForReady="INTERACTIVE">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                    </ui:Target>
+                                  </ui:Click.Target>
+                                </ui:Click>
+                                <ui:Click CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Click sluit klantenscherm" sap:VirtualizedContainerService.HintSize="334,68" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                                  <ui:Click.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </ui:Click.CursorPosition>
+                                  <ui:Click.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="812f012c-1fe9-434e-830e-be09b3993ba7" Selector="&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='Klantenscherm' /&gt;&lt;ctrl role='title bar' idx='1' /&gt;&lt;ctrl name='Close' role='push button' /&gt;" WaitForReady="INTERACTIVE">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                    </ui:Target>
+                                  </ui:Click.Target>
+                                </ui:Click>
+                              </Sequence>
+                            </ui:CommentOut.Body>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:CommentOut>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap:VirtualizedContainerService.HintSize="478,370" sap2010:WorkflowViewState.IdRef="Sequence_192">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,276" sap2010:WorkflowViewState.IdRef="CommentOut_30">
+                            <ui:CommentOut.Body>
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_189">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:Click CursorMotionType="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" ContinueOnError="True" DelayBefore="1000" DelayMS="1000" DisplayName="Click opslaan" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_10" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                                  <ui:Click.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </ui:Click.CursorPosition>
+                                  <ui:Click.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="51fad6a6-aedc-42d4-9a58-a615d8b4318a" InformativeScreenshot="5a2fa288364ff28797c0386547348c8c" Selector="&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='Verzorgers Wijzigen: *' /&gt;&#xA;&lt;wnd cls='ClaButton*' title='Opslaan' /&gt;&#xA;" WaitForReady="COMPLETE">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                    </ui:Target>
+                                  </ui:Click.Target>
+                                </ui:Click>
+                              </Sequence>
+                            </ui:CommentOut.Body>
+                          </ui:CommentOut>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                  </Sequence>
+                  <Sequence DisplayName="Ga terug naar plaatsingscherm" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Sequence_194">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:UiElementExists DisplayName="Element Exists plaatsingsregels" Exists="[Plaatsingsregels]" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
+                      <ui:UiElementExists.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6abaac56-268f-4e91-ad6e-6d5c22be16cb" InformativeScreenshot="b3dea66acd9373a11252ab383335eb95" Selector="&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='Klantenscherm' /&gt;&lt;wnd cls='ClaList*' idx='12' /&gt;&lt;ctrl name='Plaatsingen' role='client' /&gt;" TimeoutMS="8000" WaitForReady="INTERACTIVE" />
+                      </ui:UiElementExists.Target>
+                    </ui:UiElementExists>
+                    <If Condition="[Plaatsingsregels=False]" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="If_138">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send hotkey" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="SendHotkey_10" Key="tab" KeyModifiers="Ctrl" SendWindowMessages="False" SpecialKey="True">
+                          <ui:SendHotkey.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f3da08a9-0173-4332-bec1-9e47433f8849" InformativeScreenshot="e2b830f6a3425edeeec17866f6a25072" Selector="&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='Klantenscherm' /&gt;&lt;wnd ctrlid='16613' /&gt;" WaitForReady="COMPLETE">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                            </ui:Target>
+                          </ui:SendHotkey.Target>
+                        </ui:SendHotkey>
+                      </If.Then>
+                    </If>
+                    <ui:UiElementExists DisplayName="Element Exists plaatsingsregels" Exists="[Plaatsingsregels]" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
+                      <ui:UiElementExists.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6abaac56-268f-4e91-ad6e-6d5c22be16cb" InformativeScreenshot="b3dea66acd9373a11252ab383335eb95" Selector="&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='Klantenscherm' /&gt;&lt;wnd cls='ClaList*' idx='12' /&gt;&lt;ctrl name='Plaatsingen' role='client' /&gt;" TimeoutMS="1000" WaitForReady="INTERACTIVE" />
+                      </ui:UiElementExists.Target>
+                    </ui:UiElementExists>
+                    <If Condition="[Plaatsingsregels=False]" sap:VirtualizedContainerService.HintSize="484,332" sap2010:WorkflowViewState.IdRef="If_139">
+                      <If.Then>
+                        <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send hotkey" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="SendHotkey_11" Key="tab" KeyModifiers="Ctrl" SendWindowMessages="False" SpecialKey="True">
+                          <ui:SendHotkey.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f3da08a9-0173-4332-bec1-9e47433f8849" InformativeScreenshot="e2b830f6a3425edeeec17866f6a25072" Selector="&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='Klantenscherm' /&gt;&lt;wnd ctrlid='16613' /&gt;" WaitForReady="COMPLETE">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                            </ui:Target>
+                          </ui:SendHotkey.Target>
+                        </ui:SendHotkey>
+                      </If.Then>
+                    </If>
+                    <ui:UiElementExists DisplayName="Element Exists plaatsingsregels" Exists="[Plaatsingsregels]" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="UiElementExists_5">
+                      <ui:UiElementExists.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6abaac56-268f-4e91-ad6e-6d5c22be16cb" InformativeScreenshot="b3dea66acd9373a11252ab383335eb95" Selector="&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='Klantenscherm' /&gt;&lt;wnd cls='ClaList*' idx='12' /&gt;&lt;ctrl name='Plaatsingen' role='client' /&gt;" TimeoutMS="1000" WaitForReady="INTERACTIVE" />
+                      </ui:UiElementExists.Target>
+                    </ui:UiElementExists>
+                    <If Condition="[Plaatsingsregels=False]" sap:VirtualizedContainerService.HintSize="484,332" sap2010:WorkflowViewState.IdRef="If_140">
+                      <If.Then>
+                        <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send hotkey" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="SendHotkey_12" Key="tab" KeyModifiers="Ctrl" SendWindowMessages="False" SpecialKey="True">
+                          <ui:SendHotkey.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f3da08a9-0173-4332-bec1-9e47433f8849" InformativeScreenshot="e2b830f6a3425edeeec17866f6a25072" Selector="&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='Klantenscherm' /&gt;&lt;wnd ctrlid='16613' /&gt;" WaitForReady="COMPLETE">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                            </ui:Target>
+                          </ui:SendHotkey.Target>
+                        </ui:SendHotkey>
+                      </If.Then>
+                    </If>
+                  </Sequence>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="0, 0, 0, 0" FilePath="\\dtc-ipv-koc001\APPLICATIE\stamcomb.exe" IconBase64="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" InformativeScreenshot="22a36eaea5e6e062cbafb611caf23ba2.png" Selector="&lt;wnd app='stamcomb.exe' cls='ClaWin*' title='Klantenscherm' /&gt;" />
+            </uix:NApplicationCard.TargetApp>
+          </uix:NApplicationCard>
+        </If.Then>
+      </If>
+    </Sequence>
+  </Sequence>
+</Activity>
