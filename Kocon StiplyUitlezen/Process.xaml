@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1312,4682</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1015,4883</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="72">
@@ -92,7 +92,7 @@
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="HoofdSequence" sap:VirtualizedContainerService.HintSize="1025,4617" sap2010:WorkflowViewState.IdRef="Sequence_55">
+  <Sequence DisplayName="HoofdSequence" sap:VirtualizedContainerService.HintSize="1025,4718" sap2010:WorkflowViewState.IdRef="Sequence_55">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Tekst" />
       <Variable x:TypeArguments="x:String" Name="relatienummer" />
@@ -140,13 +140,14 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="lees pdf" sap:VirtualizedContainerService.HintSize="983,151" sap2010:WorkflowViewState.IdRef="Sequence_54">
+    <Sequence DisplayName="lees pdf" sap:VirtualizedContainerService.HintSize="983,252" sap2010:WorkflowViewState.IdRef="Sequence_54">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:ReadPDFText PreserveFormatting="{x:Null}" DisplayName="Read PDF Text Contract" FileName="[Bestandslocatie]" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ReadPDFText_1" Range="All" Text="[Tekst]" />
+      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_11" Text="hola" />
     </Sequence>
     <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="983,4334" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
@@ -2877,7 +2878,7 @@
               </Sequence>
             </If.Then>
             <If.Else>
-              <Sequence sap2010:Annotation.AnnotationText="In deze flow halen we de gegevens uit het ontvangen Nederlandstalige contract zodat we de juiste ouder/kind vinden" DisplayName="Sequence haal info uit PDF" sap:VirtualizedContainerService.HintSize="200,109" sap2010:WorkflowViewState.IdRef="Sequence_1">
+              <Sequence sap2010:Annotation.AnnotationText="In deze flow halen we de gegevens uit het ontvangen Nederlandstalige contract zodat we de juiste ouder/kind vinden" DisplayName="Sequence haal info uit PDF" sap:VirtualizedContainerService.HintSize="200,153" sap2010:WorkflowViewState.IdRef="Sequence_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
